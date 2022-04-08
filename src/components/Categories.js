@@ -5,7 +5,16 @@ const Categories = () => {
     const [categories, setCategories] = useState(null);
 
     function handleData(data) {
-        data = data.map((key) => <div key={key.title}>{`${key.title} ${key.description}`}</div>)
+        data = data.map(
+            (key) => <div className="category" key={key.title}>
+                        <div className="categoryTitle">
+                            {`${key.title}`}
+                        </div>
+                        <div className="categoryDescription">
+                            {`${key.description}`}
+                        </div>
+                    </div>
+        )
         setCategories(data)
     }
 
@@ -19,8 +28,8 @@ const Categories = () => {
     }, []);
 
     return (
-        <div className="">
-            <div>{categories}</div>
+        <div className="categories">
+            {categories}
         </div>
     );
 };

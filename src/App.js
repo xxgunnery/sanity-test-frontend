@@ -10,13 +10,13 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <BrowserRouter>
-        <div className="max-w-full">
+        <div className="">
             <Header />
         </div>
         <Routes>
             <Route element={< Home/>} exact path="/" />
         </Routes>
-        <div className="max-w-full">
+        <div className="">
             <Footer />
         </div>
     </BrowserRouter>
